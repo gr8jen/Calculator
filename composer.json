@@ -1,0 +1,50 @@
+{
+    "name": "challenge/calculator",
+    "type": "project",
+    "description": "The calculator",
+    "keywords": [
+        "calculator"
+    ],
+    "license": "MIT",
+    "require": {
+        "php": "^7.4",
+        "webmozart/assert": "^1.10"
+    },
+    "require-dev": {
+        "enlightn/security-checker": "^1.4",
+        "ergebnis/composer-normalize": "^2.13",
+        "phpunit/phpunit": "^9.5",
+        "roave/security-advisories": "dev-master",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "preferred-install": "dist",
+        "sort-packages": true
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "check-all": [
+            "composer diagnose",
+            "composer check-platform-reqs",
+            "composer normalize --dry-run",
+            "composer style",
+            "composer security-checker",
+            "composer unit"
+        ],
+        "coverage": "vendor/bin/phpunit --configuration phpunit.xml --coverage-html tests/report",
+        "fix-style": "vendor/bin/phpcbf --standard=phpcs.xml",
+        "security-checker": "vendor/bin/security-checker security:check composer.lock",
+        "style": "vendor/bin/phpcs  --standard=phpcs.xml",
+        "unit": "vendor/bin/phpunit  --colors=never --configuration phpunit.xml --coverage-text --testdox"
+    }
+}
