@@ -17,7 +17,7 @@ git clone git@github.com:gr8jen/Calculator.git
 ``` 
  Go to the root of this project:
 ```
-cd calculator/
+cd Calculator/
 ```
 Type the following command to install all the needed extra packages:
 ```
