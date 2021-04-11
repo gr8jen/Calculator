@@ -6,3 +6,4 @@
 # Environment files
 *.log
 .idea
+.phpunit.result.cache
