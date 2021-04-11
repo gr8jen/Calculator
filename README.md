@@ -10,7 +10,7 @@ Needed 'software' on the computer are:
 
 - composer
 
-## Installing the game
+## Installing the Calculator
 Open a terminal and type at the desired location:
 ```
 git clone git@github.com:gr8jen/Calculator.git
