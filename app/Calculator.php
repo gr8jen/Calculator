@@ -9,13 +9,13 @@ use Webmozart\Assert\Assert;
 final class Calculator
 {
     /**
-     * Calculates the increment for a not formatted number. When number has decimals notation, it needs to be removed.
+     * Calculates the increment for a not formatted number. When it has a thousands separator, it needs to be removed.
      * It calculates the increment though adding yearly the current amount to the investment
      * and multiplying that with the given percentage. This is done for every year that is given.
      *
      * @param float $investment Yearly investment amount, this must be a positive number.
      * @param int $totalYears Total years of investment, this must be filled as full years.
-     * @param float $interestPercentage Positive or negative percentage, it may use decimals.
+     * @param float $interestPercentage Positive or negative percentage, it may use decimals. min -99, max 100.00
      * @return float
      */
     public static function increment(float $investment, int $totalYears, float $interestPercentage): float
